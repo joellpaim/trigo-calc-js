@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometria JS</title>
+
+        <!--Materialize CSS-->
+    <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <!--Local CSS-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="application/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    
+</head>
+<body>
+
+    <main>
+        <section>
+            <div class="col s12">
+                <div class="row">  
+                    <!--Informações-->              
+                    <div class="col s6 white-text">
+                        <div class="okraj">
+                            <h3>Área e perímetro do triângulo retângulo</h3>
+                            <ul class="text">
+                              <li>O triângulo retângulo forma os catetos que são mutuamente perpendiculares e a hipotenusa – o lado mais longo.</li>
+                              <li>A soma dos ângulos do triângulo é 180°, e vale o seguinte:  <span class="prom">α&nbsp;+&nbsp;β&nbsp;=&nbsp;</span>90°.</li> 
+                              <li>Os comprimentos dos lados podem ser determinados usando o Teorema de Pitágoras, os tamanhos dos ângulos usando as funções trigonométricas.</li>            
+                            </ul>
+                            <h3>Fórmulas</h3>
+                            <div class="obr">   
+                              <img src="assets/img/oo-pt-1.svg" alt="Triângulo retângulo">        
+                              <img src="assets/img/oo-pt-1 (1).svg" alt="Área e perímetro do triângulo retângulo"> 
+                              <div class="zaverka">
+
+                              </div>
+                            </div>
+                            <ul class="popis">   
+                              <li><span>P</span> – perímetro</li>
+                              <li><span>A</span> – área</li>
+                            </ul>
+                            <ul class="popis">   
+                              <li><span>a,b</span> – catetos formam o ângulo reto</li>
+                              <li><span>c</span> – hipotenusa</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Calculadora-->
+                    <div class="col s6 containerCalc">
+                        <form name="pTrojuhelnik" action="javascript:pravTrojuhelnik()">
+                            <div class="okraj">
+                              <h2>Calculadora</h2>
+                              <h5 id="error1">Insira 2 valores</h5>  
+                                <div class="result">
+                                <div class="row">
+                                    <div class="col s6">
+                                        <input type="text" name="stranaA" placeholder="a">
+                                    </div>
+                                    <div class="col s6">
+                                        <input type="text" name="stranaB" placeholder="b">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6">
+                                        <input type="text" name="stranaC" placeholder="c">
+                                    </div>
+                                    <div class="col s6">
+                                        <input type="text" name="alfa" placeholder="α">
+                                    </div>
+                                </div>
+                                <div class="row">                                    
+                                    <div class="col s6">
+                                        <input type="text" name="beta" placeholder="β">
+                                    </div>
+                                    <div class="input-field col s3">                                        
+                                        <select id="opcoes" name="jednotkaU">   
+                                            <option>°</option>
+                                            <option>rad</option>
+                                        </select>
+                                        <label for="opcoes">Selecione</label>
+                                        <script>
+                                            $(document).ready(function(){
+                                            $('select').formSelect();
+                                            });
+                                        </script>
+                                    </div>
+                                    <div class="col s12">
+                                        <input type="text" name="desMistaL" value="2" onfocus="uvolniDML();" onblur="zaplnDML()" class="desMista" placeholder="Arredondar para quantas casas decimais?">
+                                    </div>
+                                </div>
+                                
+                                    
+                                
+                                         
+                                                                                                        
+                                <div class="tlacitka">
+                                    <button class="waves-effect waves-light btn cyan darken-4" type="submit"><i class="material-icons right">check</i>Calcular</button>
+                                    <button class="waves-effect waves-light btn red darken-1" type="reset"><i class="material-icons right">clear</i>Apagar</button>
+                                </div> 
+                                <table class="result">
+                                    <tbody>
+                                        <tr>
+                                            <td>Área  <span class="prom">A</span>
+                                            </td>
+                                            <td>
+                                                <input type="text" class="vysl" name="obsah" readonly="" style="border-bottom: 3px double rgb(102, 102, 102);">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Perímetro <span class="prom">P</span>
+                                            </td>
+                                            <td>
+                                                <input type="text" class="vysl" name="obvod" readonly="" style="border-bottom: 3px double rgb(102, 102, 102);">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>       
+                                </div>   
+                            </div> 
+                        </form>   
+                    </div>  
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <footer class="page-footer cyan darken-4">
+    
+        <div class="footer-copyright cyan darken-4">
+          <div class="container">
+            © 2022 Designed by Joel Paim
+          </div>
+        </div>
+    
+      </footer>
+    
+    
+      <!--Local JS-->
+      <script src="assets/js/scripts.js"></script>
+      <!--Materialize JS-->
+      <script src="./assets/js/materialize.min.js"></script>
+      
+</body>
+</html>
